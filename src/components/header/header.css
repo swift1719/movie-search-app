@@ -21,7 +21,7 @@ header{
     z-index:5;
 }
 
-@media (max-width:760px) {
+@media (max-width:700px) {
     header{
         padding-top: 15px;
         font-size:6.4vw;
