@@ -1,0 +1,29 @@
+header{
+    /* 100% width of the screen */
+    width: 100%;
+    /* cursor is going to be pointed when we hover over header */
+    cursor: pointer;
+    /* position of header should be fixed at top */
+    position:fixed;
+
+    display: flex;
+    /* center the content of the header */
+    justify-content: center;
+    text-transform: uppercase;
+    background-color: #39445a;
+    font-family: "Montserrat",sans-serif;
+    /* font will be responsive by using vw which stands for view-port width */
+    font-size: 2.5vw;
+    padding-bottom: 15px;
+    box-shadow: 0px 1px 5px black;
+    color:white;
+    /* in order to keep it above all elements use a positive value of z-index */
+    z-index:5;
+}
+
+@media (max-width:760px) {
+    header{
+        padding-top: 15px;
+        font-size:6.4vw;
+    }
+}
