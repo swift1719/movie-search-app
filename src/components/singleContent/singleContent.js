@@ -1,4 +1,6 @@
 import React from 'react';
+import {img_300,unavailable} from '../../config/config';
+
 const SingleContent = ({
     id,
     poster,
@@ -9,9 +11,8 @@ const SingleContent = ({
 }) => {
     return (
         <div>
-            {
-                title
-            }
+            <img alt="Poster unavailable" src={poster?`${img_300}/${poster}`:`${unavailable}`}/>
+
         </div>
     )
 }
