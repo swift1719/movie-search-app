@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import axios from 'axios';  
 import SingleContent from '../../components/singleContent/singleContent';
+import './trending.css';
 
 const Trending = () => {
 
@@ -20,7 +21,7 @@ const Trending = () => {
 
     return (
         <div>
-            <span className="page-title">Trending</span>
+            <span className="pageTitle">Trending</span>
             <div className="trending">
                 {
                     content && content.map(el => 
