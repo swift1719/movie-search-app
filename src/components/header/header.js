@@ -4,7 +4,12 @@ import './header.css'
 const Header = () => {
     return (
 	
-    <header > 🎥 Binge Search 🎥</header>
+    <header 
+    onClick={()=>window.scroll(0,0)} 
+    className="header"
+    >
+        🎥 Binge Search 🎥
+    </header>
             
     )
 }
