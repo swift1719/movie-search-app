@@ -1,3 +1,6 @@
+*{
+    scroll-behavior: smooth;
+}
 .App{
     /* to cover entire screen height  */
     min-height: 100vh;
@@ -10,5 +13,20 @@
 @media (max-with:700px) {
     .App{
         padding-top: 70px;
+    }
+}
+.pageTitle{
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 2vw;
+    padding: 4px;
+    border-radius: 50px;
+    color: wheat;
+}
+@media (max-widt:1000px) {
+    .pageTitle{
+        font-size: 6.4vw;
     }
 }
