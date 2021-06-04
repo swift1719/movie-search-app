@@ -4,13 +4,13 @@ import {img_300,unavailable} from '../../config/config';
 import './singleContent.css';
 
 const SingleContent = ({
-    id,
-    poster,
-    title,
-    date,
-    media_type,
-    vote_average
-}) => {
+        id,
+        poster,
+        title,
+        date,
+        media_type,
+        vote_average
+    }) => {
     return (
         <div className="media">
             <Badge 
