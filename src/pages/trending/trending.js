@@ -23,7 +23,7 @@ const Trending = () => {
     }, [page]);
 
     return (
-        <div>
+        <>
             <span className="pageTitle">Trending</span>
             <div className="trending">
                 {
@@ -42,7 +42,7 @@ const Trending = () => {
                 }
             </div>
             <CustomPagination setPage={setPage} numOfPages={10} />
-        </div>
+        </>
     )
 }
 
