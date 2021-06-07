@@ -22,6 +22,7 @@ const Movies = () => {
 
     useEffect(()=>{
         fetchMovies();
+        window.scroll(0,0);
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[page]);
 
@@ -30,6 +31,7 @@ const Movies = () => {
             <span className="pageTitle">Movies</span>
             <Genres
             type="movie"
+            selectedGenres={selectedGenres}
             setSelectedGenres={setSelectedGenres}
             genres={genres}
             setGenres={setGenres}
