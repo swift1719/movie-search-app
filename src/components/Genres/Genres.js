@@ -29,6 +29,7 @@ const Genres = ({
     }
     useEffect(() => {
         fetchGenres()
+        //to unmount the component when url/page changes
         return () => {
             setGenres([])
         }
