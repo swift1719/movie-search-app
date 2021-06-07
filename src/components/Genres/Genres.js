@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React,{useState,useEffect} from 'react'
+import React,{useEffect} from 'react'
 import Chip from '@material-ui/core/Chip';
 
 const Genres = ({
@@ -17,6 +17,16 @@ const Genres = ({
         `);
         setGenres(data.genres);
     }
+    const handleAdd = (genre)=>{
+        setSelectedGenres([...selectedGenres,genre]);
+        setGenres(genres.filter((g)=>g.id!==genre.id));
+        setPage(1);
+    }
+    const handleRemove=(genre)=>{
+        setSelectedGenres(selectedGenres.filter((g)=>g.id!==genre.id));
+        setGenres([...genres,genre]);
+        setPage(1);
+    }
     useEffect(() => {
         fetchGenres()
         return () => {
@@ -26,15 +36,31 @@ const Genres = ({
     }, [])
     return (
         <div style={{padding:"6px 0"}}>
-            {genres && genres.map((genre)=>(
+            {
+                selectedGenres && selectedGenres.map((genre)=>(
+                <Chip 
+                key={genre.id} 
+                size="small" 
+                color="primary"
+                clickable 
+                label={genre.name} 
+                style={{margin:2}} 
+                onDelete={()=>handleRemove(genre)}
+                />
+                ))
+            }
+            {
+                genres && genres.map((genre)=>(
                 <Chip 
                 key={genre.id} 
                 size="small" 
                 clickable 
                 label={genre.name} 
                 style={{margin:2}} 
+                onClick={()=>handleAdd(genre)}
                 />
-        ))}
+                ))
+            }
         </div>
     )
 }
