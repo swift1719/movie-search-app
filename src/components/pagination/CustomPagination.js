@@ -1,3 +1,4 @@
+import React from 'react';
 import { createMuiTheme, ThemeProvider  } from '@material-ui/core';
 import Pagination from '@material-ui/lab/Pagination';
 
@@ -8,10 +9,17 @@ const darkTheme=createMuiTheme({
 });
 
 const CustomPagination = ({setPage,numOfPages=10}) => {
-
-    const handlePageChange=(page)=>{
-        setPage(page);
+    
+    const handlePageChange=(p)=>{
+        setPage(p);
     }
+    // useEffect(() => {
+    //     setPage(page);
+    //     return () => {
+    //         setPage(1);
+    //     }
+    // // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, [])
     return (
         <div
         style={{
