@@ -18,6 +18,7 @@ const Series = () => {
         const {data}= await axios.get(`
         https://api.themoviedb.org/3/discover/tv?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=${genreForURL}
         `);
+        // console.log(data);
         setContent(data.results);
         setNumOfPages(data.total_pages);
     };
@@ -49,7 +50,7 @@ const Series = () => {
                         poster={el.poster_path} 
                         title={el.title || el.name} 
                         date={el.first_air_date || el.release_date}
-                        media_type="TV"
+                        media_type="tv"
                         vote_average={el.vote_average} 
                         />
                     )
