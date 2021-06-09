@@ -36,7 +36,7 @@ const Trending = () => {
                         poster={el.poster_path} 
                         title={el.title || el.name} 
                         date={el.first_air_date || el.release_date}
-                        media={el.media_type}
+                        media_type={el.media_type}
                         vote_average={el.vote_average} 
                         />
                     )
