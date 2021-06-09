@@ -89,7 +89,7 @@ const Search = () => {
                         poster={el.poster_path} 
                         title={el.title || el.name} 
                         date={el.first_air_date || el.release_date}
-                        media_type={tabNo?"TV":"movie"}
+                        media_type={tabNo?"tv":"movie"}
                         vote_average={el.vote_average} 
                         />
                     )
