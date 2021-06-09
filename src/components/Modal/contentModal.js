@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
 	},
   }));
 
-export default function TransitionsModal({ children, media_type, id }) {
+export default function ContentModal({ children, media_type, id }) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const [content, setContent] = useState();
