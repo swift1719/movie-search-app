@@ -2,7 +2,7 @@ import { Badge } from '@material-ui/core';
 import React from 'react';
 import {img_300,unavailable} from '../../config/config';
 import './singleContent.css';
-import ContentModal from '../Modal/contentModal';
+import ContentModal from '../Modal/contentModal.js';
 
 const SingleContent = ({
         id,
@@ -25,7 +25,7 @@ const SingleContent = ({
             />
             <b className="title">{title}</b>
             <span className="subTitle">
-                {media_type==="TV"?"Web series":"Movie"}
+                {media_type==="tv"?"Web series":"Movie"}
                 <span className="subTitle">{date}</span>
             </span>
         </ContentModal>
