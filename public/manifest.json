@@ -1,11 +1,37 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    
-  ],
-  "start_url": ".",
+  "name": "Binge Searcher",
+  "short_name": "Binge Search",
+  "theme_color": "#315c7e",
+  "background_color": "#315f83",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "scope": "/",
+  "start_url": "/",
+  "icons":[
+    {
+      "src":"maskable.png",
+      "sizes":"196x196",
+      "type":"image/png",
+      "purpose":"any maskable"
+    },
+    { 
+      "src":"logo-192.png",
+      "sizes":"192x192",
+      "type":"image/png"
+    },
+    {
+      "src":"logo-256.png",
+      "sizes":"256x256",
+      "type":"image/png"
+    },
+    {
+      "src":"logo-384.png",
+      "sizes":"384x384",
+      "type":"image/png"
+    },
+    {
+      "src":"logo-512.png",
+      "sizes":"512x512",
+      "type":"image/png"
+    }
+  ]
 }
