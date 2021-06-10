@@ -4,6 +4,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import axios from 'axios';
 import CustomPagination from '../../components/pagination/CustomPagination';
 import SingleContent from '../../components/singleContent/singleContent';
+import './search.css';
 
 const darkTheme = createMuiTheme({
     palette:{
@@ -38,6 +39,10 @@ const Search = () => {
         }
     };
     
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+        fetchSearch();
+    }
     useEffect(()=>{
         window.scroll(0,0);
         fetchSearch();
@@ -45,25 +50,26 @@ const Search = () => {
     },[tabNo,page]);
 
     return (
-        <div>
+        <div >
             <ThemeProvider theme={darkTheme}>
-                <div style={{display:"flex", margin:"15px 0"}}>
+                <form 
+                onSubmit={handleSubmit}
+                className="search-form"
+                >
                     <TextField
-                    style={{flex:1}}
-                    className="searchBox"
+                    className="search"
                     label="Search"
                     variant="filled"
-                    // onSubmit={fetchSearch}
                     onChange={(e)=>setSearchContent(e.target.value)}
                     />
                     <Button 
+                    style={{borderRadius:"0px"}}
                     variant="contained" 
-                    style={{marginLeft:10}}
                     onClick={fetchSearch}
                     >
                         <SearchIcon fontSize="large" />
                     </Button>
-                </div>
+                </form>
                 <Tabs 
                 value={tabNo} 
                 indicatorColor='primary' 
@@ -72,8 +78,7 @@ const Search = () => {
                     setTabNo(newValue);
                     setPage(1);
                 }}
-                style={{paddingBottom:5}}
-                aria-label="disabled tabs"
+                className="search-tabs"
                 >
                     <Tab  style={{width:"50%"}} label="Search Movies" />
                     <Tab  style={{width:"50%"}} label="Search Webseries" />
@@ -96,7 +101,7 @@ const Search = () => {
                 }
                 {
                     searchContent!=='' &&
-                    content.length===0 &&
+                    content.length===0  &&
                     (tabNo?<h2>No Series Found</h2>:<h2>No Movies Found</h2>)
                 }
             </div>
