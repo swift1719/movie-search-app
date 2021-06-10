@@ -13,18 +13,18 @@ header{
     background-color: #39445a;
     font-family: "Montserrat",sans-serif;
     /* font will be responsive by using vw which stands for view-port width */
-    font-size: 3vw;
+    font-size: 36px;
     font-weight: 800;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     box-shadow: 0px 1px 5px black;
     color:white;
     /* in order to keep it above all elements use a positive value of z-index */
     z-index:5;
 }
 
-@media (max-width:700px) {
+@media (max-width:834px) {
     header{
-        padding-top: 15px;
-        font-size:6.4vw;
+        font-size:25px;
     }
 }
