@@ -1,0 +1,30 @@
+.search {
+    flex:1;
+    font-weight: 600;
+    margin: 15px 0;
+}
+.search-form{
+    display: flex;
+    width: 50%;
+    margin: auto;
+}
+.search-tabs{
+    display: flex;
+    width: 40%;
+    margin: auto;
+    padding: 15px 0;
+}
+
+@media (max-width:834px) {
+    .search-form{
+        display: flex;
+        width: 70%;
+        margin: auto;
+    }
+    .search-tabs{
+        display: flex;
+        width: 70%;
+        margin: auto;
+        padding: 15px 0;
+    }
+}
