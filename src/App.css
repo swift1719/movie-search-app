@@ -20,14 +20,14 @@
     display: flex;
     justify-content: center;
     font-family: 'Montserrat',sans-serif;
-    font-size: 3vw;
+    font-size: 30px;
     font-weight: 700;
     padding: 4px;
     border-radius: 50px;
     color: wheat;
 }
-@media (max-widt:1000px) {
+@media (max-width:1000px) {
     .pageTitle{
-        font-size: 6.4vw;
+        font-size: 22px;
     }
 }
