@@ -14,11 +14,6 @@
     background-color: rgb(252, 253, 253);
     color: black;
 }
-@media (max-width:550px){
-    .media{
-        width:46%;
-    }
-}
 .poster{
     border-radius: 10px;
 }
@@ -26,6 +21,7 @@
     width:100%;
     text-align: center;
     font-weight: 700;
+    text-transform: uppercase;
     font-size: 17px;
     padding: 8px 0;
 }
@@ -35,4 +31,28 @@
     padding: 0 2px;
     font-weight: 600;
     padding-bottom: 3px;
+}
+@media (max-width:550px){
+    .media{
+        width: 140px;;
+        flex-direction: column;
+    }
+    .poster{
+        border-radius: 10px;
+    }
+    .title{
+        width:100%;
+        text-align: center;
+        font-weight: 700;
+        font-size: 15px;
+        padding: 3px 0;
+    }
+    .subTitle{
+        display: flex;
+        font-size: small;
+        justify-content: space-between;
+        padding: 0 2px;
+        font-weight: 600;
+        padding-bottom: 2px;
+    }
 }
