@@ -36,7 +36,7 @@ const Genres = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     return (
-        <div style={{padding:"6px 0"}}>
+        <div style={{padding:"6px 0",color:"black",fontWeight:"800"}}>
             {
                 selectedGenres && selectedGenres.map((genre)=>(
                 <Chip 
