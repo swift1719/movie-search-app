@@ -5,7 +5,7 @@
 * It provides latest trending movies and series.
 * It is a Progressive Web App (PWA) that makes it more responsive, faster and optimized for downloading on phone or PC. 
 
-Deployed on Netlify :- https://binge-search.netlify.app/
+Deployed on Netlify :- https://bingesearch.netlify.app/
 
 > ## 🛠️ Built with
 * React - Front-End JavaScript library
